@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>3D cube</title>
+<style>
+body
+{
+background:repeating-radial-gradient(circle,yellow, blue 20%);
+margin:0;
+display:flex;
+align-items:center;
+justify-content:center;
+height:100vh;
+perspective:800px;
+}
+.face
+{
+position:absolute;
+width:200px;
+height:200px;
+border:2px solid red;
+}
+.cube
+{
+width:200px;
+height:200px;
+transform:rotateX(45deg) rotateY(45deg) rotateZ(45deg);
+animation:rotate 5s infinite linear 0.5s normal;
+transform-style:preserve-3d;
+animation: jump 2s linear 0.5s infinite normal;
+}
+.face:nth-child(1)
+{
+font-size:50px;
+text-align:center;
+background-color:pink;
+transform:rotateY(0deg) translateZ(100px);
+}
+.face:nth-child(2)
+{
+font-size:50px;
+text-align:center;
+background-color:rgb(75, 231, 134);
+transform:rotateX(270deg) translateZ(100px);
+}
+.face:nth-child(3)
+{
+font-size:50px;
+text-align:center;
+background-color:orange;
+transform:rotateY(180deg) translateZ(100px);
+}
+.face:nth-child(4)
+{
+font-size:50px;
+text-align:center;
+background-color:rgb(65, 145, 220);
+transform:rotateX(90deg) translateZ(100px);
+}
+.face:nth-child(5)
+{
+font-size:50px;
+text-align:center;
+background-color:violet;
+transform:rotateY(90deg) translateZ(100px);
+}
+.face:nth-child(6)
+{
+font-size:50px;
+text-align:center;
+background-color:skyblue;
+transform:rotateY(-90deg) translateZ(100px);
+}
+@keyframes jump {
+            0%{margin: 0;}
+            50%{margin-top: 30%;margin-left: 50%; transform: rotate(360deg);}
+            100%{margin-top: 0; margin-left: 100%;transform: rotate(360deg);}
+            
+        }
+@keyframes rotate{
+               from{transform:rotateX(45deg) rotateY(45deg) rotateZ(45deg);}
+               to{transform:rotateX(360deg) rotateY(360deg) rotateZ(360deg);}
+}
+</style>
+</head>
+<body>
+<div class="cube">
+<div class="face"><p>ANSHU</p></div>
+<div class="face"><p>ANSHU</p></div>
+<div class="face"><p>ANSHU</p></div>
+<div class="face"><p>ANSHU</p></div>
+<div class="face"><p>ANSHU</p></div>
+<div class="face"><p>ANSHU</p></div>
+</div>
+</body>
+</html>
